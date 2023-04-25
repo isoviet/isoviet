@@ -7,22 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: 🦑 Medias
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@latest
-        with:
-          filename: medias.svg
-          token: ${{ secrets.TOKEN }}
-          base: ""
-          config_order: anilist, music
-          output_action: gist
-          committer_gist: ${{ secrets.GIST }}
-          plugin_anilist: yes
-          plugin_anilist_medias: anime
-          plugin_anilist_sections: favorites, characters
-          plugin_anilist_limit: 2
-
-      - name: 🦑 Achievements
+      - name: Achievements
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
         with:
@@ -35,7 +20,7 @@ jobs:
           plugin_achievements_display: compact
           plugin_fortune: yes
 
-      - name: 🦑 Sponsors
+      - name: Sponsors
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
         with:
@@ -49,7 +34,7 @@ jobs:
           plugin_sponsorships: yes
           plugin_sponsorships_sections: amount
 
-      - name: 🦑 General
+      - name: General
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
         with:
