@@ -20,6 +20,18 @@ jobs:
           plugin_achievements_display: compact
           plugin_fortune: yes
 
+      - name: Featured repositories
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@latest
+        with:
+          filename: repositories.svg
+          token: ${{ secrets.TOKEN }}
+          base: ""
+          output_action: gist
+          committer_gist: ${{ secrets.GIST }}
+          plugin_repositories: yes
+          plugin_repositories_featured: isoviet/odd-food, isoviet/asi-loader, isoviet/easy-loader, isoviet/awesome-wotlk, isoviet/sq-client, isoviet/sq-toolbox, isoviet/sq-lib
+
       - name: General
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
@@ -33,8 +45,8 @@ jobs:
           committer_gist: ${{ secrets.GIST }}
           plugin_isocalendar: yes
           plugin_languages: yes
-          plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, vue, scala, c, c++, python, ejs
-          plugin_languages_skipped: isoviet/sq-client
+          plugin_languages_ignored: html, css, tex, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot
+          plugin_languages_skipped: isoviet/isoviet, isoviet/sq-client
           plugin_languages_details: lines, bytes-size, percentage
           plugin_languages_sections: most-used, recently-used
           plugin_languages_indepth: yes
