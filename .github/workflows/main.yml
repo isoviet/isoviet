@@ -57,6 +57,7 @@ jobs:
           plugin_languages_analysis_timeout: 60
           plugin_languages_analysis_timeout_repositories: 0
           plugin_activity: yes
-          plugin_activity_limit: 5
+          plugin_activity_skipped: isoviet/isoviet
+          plugin_activity_limit: 3
           plugin_activity_days: 0
           plugin_activity_filter: push, issue, pr, release, fork, review, ref/create
