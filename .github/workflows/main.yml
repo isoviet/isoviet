@@ -56,8 +56,7 @@ jobs:
           plugin_languages_recent_days: 30
           plugin_languages_analysis_timeout: 60
           plugin_languages_analysis_timeout_repositories: 0
-          plugin_topics: yes
-          plugin_topics_limit: 0
-          plugin_topics_mode: icons
-          plugin_notable: yes
-          plugin_discussions: yes
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_activity_days: 0
+          plugin_activity_filter: push, issue, pr, release, fork, review, ref/create
