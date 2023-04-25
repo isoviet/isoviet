@@ -30,7 +30,7 @@ jobs:
           output_action: gist
           committer_gist: ${{ secrets.GIST }}
           plugin_repositories: yes
-          plugin_repositories_featured: isoviet/odd-food, isoviet/asi-loader, isoviet/easy-loader, isoviet/awesome-wotlk, isoviet/sq-client, isoviet/sq-toolbox, isoviet/sq-lib
+          plugin_repositories_featured: isoviet/odd-food, isoviet/asi-loader, isoviet/easy-loader, isoviet/sq-client, isoviet/sq-toolbox, isoviet/sq-lib
 
       - name: General
         if: ${{ success() || failure() }}
